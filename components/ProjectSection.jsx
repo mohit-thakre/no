@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import Link from "next/link";
 
 const ProjectSection = () => {
   const projects = [
@@ -46,17 +47,59 @@ const ProjectSection = () => {
       liveLink: "https://project-gamma.live",
     },
   ];
+  const project = [
+    {
+      id: 1,
+      title: "LearnPros 2024",
+      description: "An innovative EdTech platform bridging learners.",
+      features: [
+        "Wide range of courses and resources",
+        "Teachers create courses and notes easily",
+        "Students access tools and templates",
+      ],
+      image:
+        "https://res.cloudinary.com/dixsjrfo5/image/upload/v1732289235/Screenshot_2024-11-22_205642_emjtf7.png",
+      sourceLink: "https://github.com/mohit-thakre/LearnPros",
+      liveLink: "www.learnpros.tech",
+    },
+    {
+      id: 2,
+      title: "Pages & Co 2024",
+      description: "An intuitive platform for book buying and selling.",
+      features: [
+        "Simple book browsing and purchase",
+        "Admin tools for inventory management",
+        "Secure login with bcrypt and JWT",
+      ],
+      image:
+        "https://res.cloudinary.com/dixsjrfo5/image/upload/v1737382830/Screenshot_2025-01-20_195000_ax5mzq.png",
+      sourceLink:
+        "https://github.com/mohit-thakre/FULL-STACK-MERN-BOOKSTORE-APP",
+      liveLink: "https://pages-co-bookstore-mern.vercel.app/",
+    },
+  ];
 
   return (
-    <div className="w-full">
+    <div className="w-full pt-5">
       <div className="py-8 w-full max-w-3xl">
-        <h1 className="font-bold text-4xl text-center"> Projects </h1>
-        <h1 className="font-light text-md mb-6 text-center">
-          Explore my journey of building practical, scalable, and creative
-          solutions.{" "}
+        <div className=" font-sans mx-auto w-fit bg-white text-black/90 text-sm rounded-md px-4 font-semibold">
+          Projects 💎
+        </div>
+        <h1 className="font-bold text-4xl text-center py-3">
+          {" "}
+          What I've Built{" "}
+        </h1>
+        <h1 className="font-light text-white/50 tracking-wider text-md mb-6 text-center">
+          Discover innovation and creativity.{" "}
+          <Link href="/projects">
+            <button className="text-blue-500 underline hover:text-blue-400">
+              Explore solutions
+            </button>
+          </Link>{" "}
+          crafted with precision, showcasing the journey from idea to reality.
         </h1>
         <div className="flex flex-wrap justify-center gap-4">
-          {projects.map((project) => (
+          {project.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>

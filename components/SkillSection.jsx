@@ -1,5 +1,8 @@
 import React from "react";
 import SkillButton from "./SkillButton";
+import { cn } from "@/lib/utils";
+import Marquee from "@/components/ui/marquee";
+
 import {
   RiJavascriptFill,
   RiReactjsFill,
@@ -42,6 +45,12 @@ const SkillSection = () => {
       border: "via-green-700",
       logo: RiNodejsFill,
     },
+    {
+      name: "Git",
+      textColor: "text-gray-100",
+      border: "via-gray-100",
+      logo: RiGitBranchFill,
+    },
 
     {
       name: "Express",
@@ -67,12 +76,7 @@ const SkillSection = () => {
       border: "via-blue-700",
       logo: RiCss3Fill,
     },
-    {
-      name: "Git",
-      textColor: "text-gray-100",
-      border: "via-gray-100",
-      logo: RiGitBranchFill,
-    },
+
     {
       name: "GitHub",
       textColor: "text-gray-100",
@@ -119,20 +123,51 @@ const SkillSection = () => {
     },
   ];
 
+  const firstRow = skillsData.slice(0, Math.ceil(skillsData.length / 3));
+  const secondRow = skillsData.slice(
+    Math.ceil(skillsData.length / 3),
+    Math.ceil((2 * skillsData.length) / 3)
+  );
+  const thirdRow = skillsData.slice(Math.ceil((2 * skillsData.length) / 3));
+
   return (
     <div className="w-full">
-      <div className="py-8 w-full max-w-3xl">
-        <h1 className="font-bold text-2xl mb-6"> 我 • Tech Stack </h1>
+      <div className="pb-8 w-full max-w-3xl max-h-[300px] overflow-hidden">
+        <h1 className="font-semibold text-xl pt-4"> 我 • Tech Stack </h1>
         <div className="flex flex-wrap justify-center gap-4">
-          {skillsData.map((item, idx) => (
-            <SkillButton
-              key={idx}
-              name={item.name}
-              textcolor={item.textColor}
-              logo={item.logo}
-              border={item.border}
-            />
-          ))}
+          <Marquee pauseOnHover vertical className="[--duration:20s]">
+            {firstRow.map((item, idx) => (
+              <SkillButton
+                key={idx}
+                name={item.name}
+                textcolor={item.textColor}
+                logo={item.logo}
+                border={item.border}
+              />
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover vertical className="[--duration:20s]">
+            {secondRow.map((item, idx) => (
+              <SkillButton
+                key={idx}
+                name={item.name}
+                textcolor={item.textColor}
+                logo={item.logo}
+                border={item.border}
+              />
+            ))}
+          </Marquee>
+          <Marquee pauseOnHover vertical className="[--duration:20s]">
+            {thirdRow.map((item, idx) => (
+              <SkillButton
+                key={idx}
+                name={item.name}
+                textcolor={item.textColor}
+                logo={item.logo}
+                border={item.border}
+              />
+            ))}
+          </Marquee>
         </div>
       </div>
     </div>
