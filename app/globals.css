@@ -4,6 +4,8 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
 }
 
 @layer base {
@@ -69,4 +71,39 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.center {
+  @apply flex justify-center items-center;
+}
+
+.bg {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='1' height='1' fill='none' stroke-width='2' stroke='%2318181b'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
+.hero-btn {
+  @apply center gap-1 border-[0.5px] border-white rounded-md px-3 text-xs font-sans py-1;
+}
+
+body {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke-width='2' stroke='%2318181b'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+}
+
+/* Glassmorphism card effect */
+.card {
+  backdrop-filter: blur(1px) saturate(112%);
+  -webkit-backdrop-filter: blur(0px) saturate(112%);
+  /* background-color: rgb(10, 10, 10); */
+  border-radius: 12px;
+  border: 1px solid rgb(255, 252, 252, 0.5);
+}
+
+.tem1 {
+  @apply flex justify-start items-center flex-col py-10 w-full max-w-3xl min-h-screen;
+}
+.tem {
+  @apply center bg w-full  bg-black text-white;
+}
+.c {
+  column-width: 200px;
 }

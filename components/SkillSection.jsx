@@ -132,7 +132,7 @@ const SkillSection = () => {
 
   return (
     <div className="w-full">
-      <div className="pb-8 w-full max-w-3xl max-h-[300px] overflow-hidden">
+      <div className="pb-8 w-full max-w-xl max-h-[300px] overflow-hidden">
         <h1 className="font-semibold text-xl pt-4"> 我 • Tech Stack </h1>
         <div className="flex flex-wrap justify-center gap-4">
           <Marquee pauseOnHover vertical className="[--duration:20s]">

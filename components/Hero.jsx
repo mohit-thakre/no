@@ -17,11 +17,20 @@ import ProjectSection from "./ProjectSection";
 import Contact from "./Contact";
 
 const Hero = () => {
-  const currentTime = new Date();
+  const [currentTime, setCurrentTime] = useState(new Date());
   const DATA = {
     localCode: "en-US",
     timeZone: "Asia/Kolkata",
   };
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   const handleCheck = (id) => {
     setTodos((prev) =>
       prev.map((todo) =>
@@ -55,17 +64,17 @@ const Hero = () => {
               Betul, India
             </button>
 
-            {/* <button className="hero-btn">
+            <button className="hero-btn">
               <ImAlarm className=" text-blue-500" />
 
               {currentTime.toLocaleTimeString(DATA.localCode, {
                 timeZone: DATA.timeZone,
                 hour: "2-digit",
                 minute: "2-digit",
-                second: "2-digit",
+
                 hour12: true,
               })}
-            </button> */}
+            </button>
             <button className="hero-btn">
               <MdOutlineAttachFile className=" text-red-500" />
               Resume
@@ -77,7 +86,7 @@ const Hero = () => {
         <div className="mx-auto text-justify">
           <h1 className="font-semibold text-xl pt-4">About • 約</h1>
           <p className="pb-4 text-md text-zinc-200 font-sans font-light">
-            I’m <span className="underline font-semibold">Mohit</span>, a
+            I'm <span className="underline font-semibold">Mohit</span>, a
             pre-final year B.Tech student in Computer Science and Engineering
             from Bhopal, MP, India. Passionate about crafting innovative
             solutions, I constantly explore emerging technologies to create an
@@ -85,16 +94,19 @@ const Hero = () => {
           </p>
 
           <p className="py-4 text-md text-zinc-200 font-sans font-light">
-            When I’m not in coding mode, you’ll find me indulging in legendary
+            When I'm not in coding mode, you'll find me indulging in legendary
             shows like Breaking Bad, gaming, or chilling with some great music.
             Always <span className="underline font-semibold">dreaming big</span>{" "}
-            and working towards turning those dreams into reality—let’s make it
+            and working towards turning those dreams into reality—let's make it
             happen!
           </p>
         </div>
 
+        {/* SKILL SECTION  */}
         <SkillSection />
+        {/* PROJECT SECTION  */}
         <ProjectSection />
+        {/* CONTACT SECTION  */}
         <Contact />
       </div>
     </section>
