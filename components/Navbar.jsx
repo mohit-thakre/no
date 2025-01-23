@@ -17,7 +17,7 @@ const navlink = [
   },
   {
     name: "Contact",
-    link: "/project",
+    link: "/contact",
   },
 ];
 

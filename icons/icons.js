@@ -29,6 +29,10 @@ import { VscVscode } from "react-icons/vsc";
 import { FaWandMagic } from "react-icons/fa6";
 import { BsPersonArmsUp } from "react-icons/bs";
 import { TbToolsOff } from "react-icons/tb";
+import { FaLinkedin, FaEnvelope, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { CiCircleQuestion } from "react-icons/ci";
+
 export const icons = {
   VscVscode: VscVscode,
   RiJavascriptFill: RiJavascriptFill,
@@ -57,4 +61,9 @@ export const icons = {
   FaWandMagic: FaWandMagic,
   TbToolsOff: TbToolsOff,
   BsPersonArmsUp: BsPersonArmsUp,
+  FaLinkedin,
+  FaEnvelope,
+  FaGithub,
+  FaXTwitter,
+  CiCircleQuestion,
 };
