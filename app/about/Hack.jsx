@@ -4,6 +4,7 @@ import rgp from "@/assets/grain.jpg";
 import flipkartLogo from "@/assets/flipkart.png";
 import sih from "@/assets/sih.png";
 import { MdOutlineEmojiEvents } from "react-icons/md";
+import Table from "./Table";
 
 const hackathonData = [
   {
@@ -30,25 +31,7 @@ const Hack = () => {
         <MdOutlineEmojiEvents />
       </h1>
       {hackathonData.map((hack, index) => (
-        <div key={index} className="flex justify-between gap-4 py-2">
-          <div className="flex justify-center items-center gap-3">
-            <Image
-              src={hack.image}
-              alt="rgp"
-              className="rounded-full w-12 h-12"
-            />
-            <div>
-              <h1 className="text-sm font-semibold tracking-wide">
-                {hack.title}
-              </h1>
-              <p className="text-xs font-medium tracking-wider text-white/70">
-                {hack.position}
-              </p>
-              <h1 className="tracking-wide text-sm">{hack.conductedBy}</h1>
-            </div>
-          </div>
-          <p className="font-sans text-sm">{hack.year}</p>
-        </div>
+        <Table item={hack} key={index} />
       ))}
     </div>
   );

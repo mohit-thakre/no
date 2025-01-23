@@ -10,6 +10,8 @@ import image8 from "@/assets/map.png";
 import image9 from "@/assets/dark-saas-landing-page.png";
 import image10 from "@/assets/ai-startup-landing-page.png";
 import Image from "next/image";
+import { HiOutlineAcademicCap } from "react-icons/hi";
+import { FaCamera } from "react-icons/fa";
 
 const imageData = [
   {
@@ -77,6 +79,10 @@ const imageData = [
 const Clicks = () => {
   return (
     <div className="p-6">
+      <h1 className="flex items-center gap-2 font-semibold text-xl py-2 ">
+        My Clicks
+        <FaCamera />
+      </h1>
       <div className="c">
         {imageData.map((item, id) => (
           <Image

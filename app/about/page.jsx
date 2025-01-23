@@ -2,13 +2,21 @@ import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { FaSun } from "react-icons/fa6";
+
 import rgp from "@/assets/grain.jpg";
-import { RiGeminiFill, RiJavascriptFill } from "react-icons/ri";
+import React from "react";
+import { RiJavascriptFill, RiReactjsLine } from "react-icons/ri";
+import {
+  SiTailwindcss,
+  SiMongodb,
+  SiNodedotjs,
+  SiExpress,
+} from "react-icons/si";
+import { FaUserAlt, FaCodeBranch, FaStar, FaUsers } from "react-icons/fa";
 import Edu from "./Edu";
 import Hack from "./Hack";
 import Clicks from "./Clicks";
+import Bentoinfo from "./Bentoinfo";
 
 const page = () => {
   return (
@@ -25,44 +33,15 @@ const page = () => {
               The Story of Me Being <span>🧑‍💻</span>
             </h1>
             <h1 className="font-light text-white/50 tracking-wider text-md mb-6 text-center">
-              From curiosity to coding, I’ve turned my passion for technology
+              From curiosity to coding, I've turned my passion for technology
               into a mission to deliver innovative solutions and exceed
               expectations.
             </h1>
-            <div className=" flex justify-center items-center w-full gap-2 h-[300px]">
-              <div className=" w-[75%] h-full border rounded-lg p-3">
-                <h1 className=" font-bold text-2xl">My Tools</h1>
-                <p> Software I use and recommend</p>
-                <div className=" flex gap-4 py-3 w-full">
-                  <h1 className=" p-1 bg-gradient-to-t from-black to-[#454343] rounded-lg border border-white/50 w-fit">
-                    <RiJavascriptFill className=" text-6xl text-yellow-500" />
-                  </h1>
-                  <h1 className=" p-1 bg-gradient-to-t from-black to-[#454343] rounded-lg border border-white/50 w-fit">
-                    <RiJavascriptFill className=" text-6xl text-yellow-500" />
-                  </h1>
-                  <h1 className=" p-1 bg-gradient-to-t from-black to-[#454343] rounded-lg border border-white/50 w-fit">
-                    <RiJavascriptFill className=" text-6xl text-yellow-500" />
-                  </h1>
-                  <h1 className=" p-1 bg-gradient-to-t from-black to-[#454343] rounded-lg border border-white/50 w-fit">
-                    <RiJavascriptFill className=" text-6xl text-yellow-500" />
-                  </h1>
-                  <h1 className=" p-1 bg-gradient-to-t from-black to-[#454343] rounded-lg border border-white/50 w-fit">
-                    <RiJavascriptFill className=" text-6xl text-yellow-500" />
-                  </h1>
-                  <h1 className=" p-1 bg-gradient-to-t from-black to-[#454343] rounded-lg border border-white/50 w-fit">
-                    <RiJavascriptFill className=" text-6xl text-yellow-500" />
-                  </h1>
-                  <h1 className=" p-1 bg-gradient-to-t from-black to-[#454343] rounded-lg border border-white/50 w-fit">
-                    <RiJavascriptFill className=" text-6xl text-yellow-500" />
-                  </h1>
-                </div>
-              </div>
-              <div className=" w-[25%] h-full border rounded-lg p-3">sdfaf</div>
-            </div>
-
             <Edu />
             <Hack />
-            <Clicks />
+            <Bentoinfo />
+
+            {/* <Clicks /> */}
           </div>
         </div>
       </div>

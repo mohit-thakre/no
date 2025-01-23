@@ -4,6 +4,7 @@ import rgp from "@/assets/grain.jpg";
 import rgpv from "@/assets/rgpv.png";
 import samv from "@/assets/samv.jpeg";
 import { HiOutlineAcademicCap } from "react-icons/hi";
+import Table from "./Table";
 
 const educationData = [
   {
@@ -37,25 +38,7 @@ const Edu = () => {
         <HiOutlineAcademicCap />
       </h1>
       {educationData.map((edu, index) => (
-        <div key={index} className="flex justify-between gap-4 py-2">
-          <div className="flex justify-center items-center gap-3">
-            <Image
-              src={edu.image}
-              alt="rgp"
-              className="rounded-full w-12 h-12"
-            />
-            <div>
-              <h1 className="text-sm font-semibold tracking-wide">
-                {edu.title}
-              </h1>
-              <p className="text-xs font-medium tracking-wider text-white/70">
-                {edu.university}
-              </p>
-              <h1 className="tracking-wide text-sm">{edu.degree}</h1>
-            </div>
-          </div>
-          <p className="font-sans text-sm">{edu.year}</p>
-        </div>
+        <Table item={edu} key={index} />
       ))}
     </div>
   );

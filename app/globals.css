@@ -107,3 +107,10 @@ body {
 .c {
   column-width: 200px;
 }
+
+.neomorphism{
+  border-radius: 35px;
+    background: #fdfcfc;
+    box-shadow: inset 8px 8px 14px #bbbaba,
+      inset -8px -8px 14px #ffffff;
+}
