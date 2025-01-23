@@ -7,7 +7,7 @@ import { MdArrowOutward } from "react-icons/md";
 const ProjectCard = ({ project }) => {
   return (
     <div className="body">
-      <div className="card  flex flex-col md:flex-row-reverse shadow-3xl border border-white/10 rounded-lg w-full h-[280px]">
+      <div className="card  flex flex-col md:flex-row-reverse shadow-3xl border border-white/10 rounded-lg w-full h-[280px] hover:border-4  hover:ml-4 duration-150">
         <div className="relative p-2.5 md:w-2/5 shrink-0 overflow-hidden">
           <img
             src={project.image}
