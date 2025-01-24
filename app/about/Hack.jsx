@@ -1,27 +1,7 @@
-import Image from "next/image";
 import React from "react";
-import rgp from "@/assets/grain.jpg";
-import flipkartLogo from "@/assets/flipkart.png";
-import sih from "@/assets/sih.png";
 import Table from "./Table";
 import { icons } from "@/icons/icons";
-
-const hackathonData = [
-  {
-    title: "Flipkart Grid 6.0",
-    year: "2024",
-    position: " Cleared round 2",
-    conductedBy: "Flipkart",
-    image: flipkartLogo,
-  },
-  {
-    title: "Smart India Hackathon",
-    year: "2024",
-    position: "Participant",
-    conductedBy: "Ministry of Education",
-    image: sih,
-  },
-];
+import { hackathonData } from "@/data/about";
 
 const Hack = () => {
   return (

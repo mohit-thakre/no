@@ -20,18 +20,6 @@ const Hero = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const handleCheck = (id) => {
-    setTodos((prev) =>
-      prev.map((todo) =>
-        todo.id === id ? { ...todo, checked: !todo.checked } : todo
-      )
-    );
-  };
-
-  const removeElement = (id) => {
-    setTodos((prev) => prev.filter((todo) => todo.id !== id));
-  };
-
   return (
     <section className="min-h-screen  py-24">
       <div className="mx-auto w-full max-w-xl px-4">
