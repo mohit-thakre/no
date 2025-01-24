@@ -23,16 +23,27 @@ import {
   SiGithub,
   SiKingstontechnology,
 } from "react-icons/si";
-import { MdAnimation } from "react-icons/md";
-import { FaCodeBranch, FaStar, FaUsers } from "react-icons/fa";
+import {
+  MdAnimation,
+  MdArrowOutward,
+  MdOutlineAttachFile,
+} from "react-icons/md";
+import {
+  FaCodeBranch,
+  FaRegCheckCircle,
+  FaStar,
+  FaUsers,
+} from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
-import { FaWandMagic } from "react-icons/fa6";
+import { FaLocationCrosshairs, FaWandMagic } from "react-icons/fa6";
 import { BsPersonArmsUp } from "react-icons/bs";
 import { TbToolsOff } from "react-icons/tb";
-import { FaLinkedin, FaEnvelope, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope, FaGithub, FaCamera } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { CiCircleQuestion } from "react-icons/ci";
-
+import { MdExpandMore, MdOutlineEmojiEvents } from "react-icons/md";
+import { HiOutlineAcademicCap } from "react-icons/hi";
+import { ImAlarm } from "react-icons/im";
 export const icons = {
   VscVscode: VscVscode,
   RiJavascriptFill: RiJavascriptFill,
@@ -66,4 +77,15 @@ export const icons = {
   FaGithub,
   FaXTwitter,
   CiCircleQuestion,
+  MdExpandMore,
+  FaCamera,
+  HiOutlineAcademicCap,
+  MdOutlineEmojiEvents,
+  ImAlarm,
+  FaLocationCrosshairs,
+  MdOutlineAttachFile,
+  FaRegCheckCircle,
+  FaGithub,
+  MdArrowOutward,
+  MdAnimation,
 };

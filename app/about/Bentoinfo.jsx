@@ -1,8 +1,6 @@
 import React from "react";
 import { icons } from "@/icons/icons";
-
 import Marquee from "@/components/ui/marquee";
-import { HiOutlineAcademicCap } from "react-icons/hi";
 
 const Bentoinfo = () => {
   const skillsData = [
@@ -148,14 +146,14 @@ const Bentoinfo = () => {
   const thirdRow = skillsData.slice(Math.ceil((2 * skillsData.length) / 3));
 
   return (
-    <div className="max-w-xl mx-auto p-4 ">
+    <div className="max-w-xl mx-auto py-4 ">
       <h1 className="flex items-center gap-2 font-semibold text-xl py-2 ">
         Tech, Tool & More
-        <HiOutlineAcademicCap />
+        <icons.MdExpandMore />
       </h1>
-      <div className="grid grid-cols-3 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {/* Tech section */}
-        <div className="card col-span-3   rounded-lg p-4 shadow-md relative">
+        <div className="card col-span-1 md:col-span-2 lg:col-span-3 rounded-lg p-4 shadow-md relative">
           <h2 className="font-bold text-xl text-white mb-2 z-50 flex items-center gap-2">
             <icons.FaCodeBranch /> My Tech Stack
           </h2>
@@ -207,7 +205,7 @@ const Bentoinfo = () => {
         </div>
 
         {/* Tools Section */}
-        <div className="card col-span-2  rounded-lg p-4 shadow-md">
+        <div className="card col-span-1 md:col-span-2 lg:col-span-2 rounded-lg p-4 shadow-md">
           <h2 className="font-bold text-xl text-white mb-2 flex items-center gap-2">
             <icons.TbToolsOff /> My Tools
           </h2>
@@ -230,7 +228,7 @@ const Bentoinfo = () => {
         </div>
 
         {/* persona Section */}
-        <div className="card col-span-1   rounded-lg p-4 shadow-md">
+        <div className="card col-span-1 rounded-lg p-4 shadow-md">
           <h2 className="font-bold text-xl text-white mb-2 flex items-center gap-2">
             <icons.BsPersonArmsUp /> Persona
           </h2>

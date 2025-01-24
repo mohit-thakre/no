@@ -1,20 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import {
-  AnimatePresence,
-  useAnimate,
-  usePresence,
-  motion,
-} from "framer-motion";
-import { FiClock, FiTrash2 } from "react-icons/fi";
-import { FaLocationCrosshairs } from "react-icons/fa6";
-import { ImAlarm } from "react-icons/im";
-import { MdOutlineAttachFile } from "react-icons/md";
-
 import SkillSection from "./SkillSection";
-import ProjectCard from "./ProjectCard";
 import ProjectSection from "./ProjectSection";
 import Contact from "./Contact";
+import { icons } from "@/icons/icons";
 
 const Hero = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -60,12 +49,12 @@ const Hero = () => {
 
           <div className=" flex justify-start space-x-2 items-center">
             <button className="hero-btn">
-              <FaLocationCrosshairs className=" text-green-500" />
-              Betul, India
+              <icons.FaLocationCrosshairs className=" text-green-500" />
+              Bhopal, India
             </button>
 
             <button className="hero-btn">
-              <ImAlarm className=" text-blue-500" />
+              <icons.ImAlarm className=" text-blue-500" />
 
               {currentTime.toLocaleTimeString(DATA.localCode, {
                 timeZone: DATA.timeZone,
@@ -75,8 +64,8 @@ const Hero = () => {
                 hour12: true,
               })}
             </button>
-            <button className="hero-btn">
-              <MdOutlineAttachFile className=" text-red-500" />
+            <button className="hero-btn ">
+              <icons.MdOutlineAttachFile className=" text-red-500" />
               Resume
             </button>
           </div>

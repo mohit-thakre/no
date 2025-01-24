@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import center from "@/style/global.css";
 
 export default function Home() {
   return (

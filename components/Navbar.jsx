@@ -1,5 +1,4 @@
 import React from "react";
-import "@/style/global.css";
 import Link from "next/link";
 
 const navlink = [

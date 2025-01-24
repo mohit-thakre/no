@@ -83,7 +83,7 @@ const page = () => {
       <div className=" flex justify-start items-center flex-col py-10 w-full max-w-2xl  min-h-screen">
         <Navbar />
 
-        <div className="w-full max-w-xl pt-5">
+        <div className="w-full max-w-xl pt-5 sm:px-0 px-2">
           <div className="py-8 w-full ">
             <div className=" font-sans mx-auto w-fit bg-white text-black/90 text-sm rounded-md px-4 font-semibold">
               PROJECTS 🧑‍💻

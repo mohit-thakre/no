@@ -82,7 +82,7 @@ body {
 }
 
 .hero-btn {
-  @apply center gap-1 border-[0.5px] border-white rounded-md px-3 text-xs font-sans py-1;
+  @apply center gap-1 border-[0.5px] border-white  rounded-md px-3 text-xs  py-1.5;
 }
 
 body {

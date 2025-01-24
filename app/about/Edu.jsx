@@ -3,12 +3,12 @@ import React from "react";
 import rgp from "@/assets/grain.jpg";
 import rgpv from "@/assets/rgpv.png";
 import samv from "@/assets/samv.jpeg";
-import { HiOutlineAcademicCap } from "react-icons/hi";
 import Table from "./Table";
+import { icons } from "@/icons/icons";
 
 const educationData = [
   {
-    title: "Computer Science and Engineering",
+    title: "Computer Science & Engineering",
     university: "RGPV University",
     degree: "Bachelor of Technology",
     year: "2022 - 2026",
@@ -35,7 +35,7 @@ const Edu = () => {
     <div>
       <h1 className="flex items-center gap-2 font-semibold text-xl py-2 ">
         Academics
-        <HiOutlineAcademicCap />
+        <icons.HiOutlineAcademicCap />
       </h1>
       {educationData.map((edu, index) => (
         <Table item={edu} key={index} />

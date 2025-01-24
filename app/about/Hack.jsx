@@ -3,8 +3,8 @@ import React from "react";
 import rgp from "@/assets/grain.jpg";
 import flipkartLogo from "@/assets/flipkart.png";
 import sih from "@/assets/sih.png";
-import { MdOutlineEmojiEvents } from "react-icons/md";
 import Table from "./Table";
+import { icons } from "@/icons/icons";
 
 const hackathonData = [
   {
@@ -28,7 +28,7 @@ const Hack = () => {
     <div>
       <h1 className="flex items-center gap-2 font-semibold text-xl py-2 ">
         Hackathon Highlights
-        <MdOutlineEmojiEvents />
+        <icons.MdOutlineEmojiEvents />
       </h1>
       {hackathonData.map((hack, index) => (
         <Table item={hack} key={index} />
