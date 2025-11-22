@@ -64,7 +64,7 @@ const Hero = () => {
           <h1 className="font-semibold text-xl pt-4">About • 約</h1>
           <p className="pb-4 text-md text-zinc-200 font-sans font-light">
             I'm <span className="underline font-semibold">Mohit</span>, a
-            pre-final year B.Tech student in Computer Science and Engineering
+            final year B.Tech student in Computer Science and Engineering
             from Bhopal, MP, India. Passionate about crafting innovative
             solutions, I constantly explore emerging technologies to create an
             impact and stay aligned with the latest trends.
